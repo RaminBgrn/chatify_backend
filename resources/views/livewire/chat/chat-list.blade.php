@@ -19,7 +19,7 @@
                 class="inline-flex justify-center items-center rounded-full gap-x-1 text-xs font-medium px-3 lg:px-5 py-1 lg:py-2.5 border border-gray-600 text-gray-400">Deleted</button>
         </div>
     </header>
-    <main class="overflow-y-scroll overflow-hidden grow h-full relative" style="contain: content">
+    <main class="overflow-y-auto overflow-hidden grow h-full relative" style="contain: content">
         <ul class="p-2 grid w-full spacey-y-2">
             <li
                 class="py-3 hover:bg-gray-500 rounded-2xl dark:hover:bg-gray-700/70 transition colors duration-150 flex gap-4 relative w-full cursor-pointer px-2">
