@@ -30,7 +30,7 @@
 
                 @foreach ($conversation as $key => $item)
                     <li id="convertation-{{ $item->id }}" wire:key="{{ $item->id }}"
-                        class="py-3 hover:bg-gray-500 rounded-2xl dark:hover:bg-gray-700/70 transition colors duration-150 flex gap-4 relative w-full cursor-pointer px-2 my-1 {{ $item->id == $selectedConversation->id ? 'bg-gray-700' : 'bg-gray-800' }} ">
+                        class="py-3 hover:bg-gray-500 rounded-2xl dark:hover:bg-gray-700/70 transition colors duration-150 flex gap-4 relative w-full cursor-pointer px-2 my-1 {{ $item->id == $selectedConversation?->id ? 'bg-gray-700' : 'bg-gray-800' }} ">
                         <a href="#" class="shrink-0">
                             <x-avatar src="https://i.pravatar.cc/100{{ $key }}" />
                         </a>
