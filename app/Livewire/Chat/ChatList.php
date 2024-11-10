@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class ChatList extends Component
 {
-
+    public $query;
     public $selectedConversation;
 
     public function render()

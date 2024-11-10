@@ -1,4 +1,9 @@
-<div x-data="{ type: 'all' }" class="flex flex-col translate-all h-full overflow-hidden">
+<div x-data="{ type: 'all', query: @entangle('query') }" x-init="setTimeout(() => {
+            conversationElement = document.getElementById('conversation-' + query ');
+                if (conversationElement) {
+                    conversationElement.scrollIntoView({ 'behavior': 'smooth' });
+                }
+            }), 200;" class="flex flex-col translate-all h-full overflow-hidden">
     <header class="px-3 z-10 bg-gray-800 sticky top-0 w-full py-2">
         <div class="border-b border-gray-700 justify-between flex items-center pb-2 ">
             <div class="flex items-center gap-2">
@@ -24,7 +29,7 @@
             @if ($conversation)
 
                 @foreach ($conversation as $key => $item)
-                    <li
+                    <li id="convertation-{{ $item->id }}" wire:key="{{ $item->id }}"
                         class="py-3 hover:bg-gray-500 rounded-2xl dark:hover:bg-gray-700/70 transition colors duration-150 flex gap-4 relative w-full cursor-pointer px-2 my-1 {{ $item->id == $selectedConversation->id ? 'bg-gray-700' : 'bg-gray-800' }} ">
                         <a href="#" class="shrink-0">
                             <x-avatar src="https://i.pravatar.cc/100{{ $key }}" />
