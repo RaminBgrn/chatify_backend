@@ -53,7 +53,7 @@
                                     'text-gray-500' => !($message->sender_id === auth()->id()),
                                     'text-white' => $message->sender_id === auth()->id(),
                                 ])>
-                                    5:25 am
+                                    {{ $message->created_at->format('g:i a') }}
                                 </p>
                                 @if ($message->sender_id === auth()->id())
                                     <div>

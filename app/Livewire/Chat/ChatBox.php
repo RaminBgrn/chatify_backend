@@ -24,10 +24,10 @@ class ChatBox extends Component
             'body' => $this->body,
         ]);
 
-        $this->reset('body');
 
+        $this->reset('body');
         # push message
-        // $this->loadedMessages->push($createMessage);
+        $this->loadedMessages->push($createMessage);
     }
 
     public function loadMessage()
